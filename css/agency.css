@@ -148,7 +148,7 @@ fieldset[disabled] .btn-xl.active {
     background-color: #fff
 }
 .navbar-default {
-    background-color: #222;
+    background-color: #16171D;
     border-color: transparent
 }
 .navbar-default .navbar-brand {
@@ -216,7 +216,7 @@ fieldset[disabled] .btn-xl.active {
         border-radius: 3px
     }
     .navbar-default.navbar-shrink {
-        background-color: #222;
+        background-color: #16171D;
         padding: 10px 0
     }
     .navbar-default.navbar-shrink .navbar-brand {
@@ -229,33 +229,66 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url("../img/header-bg.jpg");
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    background-color: black;
+}
+header .cycle-slideshow {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    z-index: 1;
+}
+
+header
+img::before {
+    /* Disable alt text showing on frontpage */
+    display: none;
 }
 header .intro-text {
     position: relative;
     width: 100%;
     padding: 100px 15px;
     text-align: center;
+    z-index: 200;
 }
 header .intro-text .intro-lead-in {
-    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: italic;
     font-size: 22px;
     line-height: 22px;
     margin-bottom: 25px
 }
-header .intro-text .intro-heading {
+header .slide {
+    visibility:hidden; /* initial page load */
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+    filter: brightness(80%) contrast(90%);
+    background-position: center center;
+}
+img {
+    /* hide alt text */
+    color: transparent;   
+}
+header .intro-heading {
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 40px;
     line-height: 50px;
-    margin-bottom: 25px
+	margin-bottom: 25px
+}
+header .hero-content {
+    z-index: 3;
+    margin: auto 20px;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    top: 60%;
+    transform: translateY(-60%);
+}
+
+header .page-scroll {
+    visibility: hidden;
 }
 
 @media (min-width: 768px) {
@@ -271,7 +304,7 @@ header .intro-text .intro-heading {
         transform: translateY(-50%);
     }
     header .intro-text .intro-lead-in {
-        font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-style: italic;
         font-size: 40px;
         line-height: 40px;
@@ -279,7 +312,7 @@ header .intro-text .intro-heading {
         margin-left: auto;
         max-width: 80%;
     }
-    header .intro-text .intro-heading {
+    header .intro-heading {
         font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
         text-transform: uppercase;
         font-weight: 700;
@@ -288,6 +321,30 @@ header .intro-text .intro-heading {
         margin-right: auto;
         margin-left: auto;
         max-width: 1000px;
+    }
+    header .cycle-slideshow {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        z-index: 1;
+    }
+    header .hero-content {
+        z-index: 3;
+        top: 60%;
+        transform: translateY(-60%);
+    }
+    
+    header .intro-heading {
+        font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 75px;
+        line-height: 75px;
+        margin-bottom: 25px;
+    }
+
+    header .page-scroll {
+        visibility: visible;
     }
 }
 section {
@@ -300,7 +357,7 @@ section h2.section-heading {
 }
 section h3.section-subheading {
     font-size: 16px;
-    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: none;
     font-style: italic;
     font-weight: 400;
@@ -319,6 +376,8 @@ aside.clients img {
     margin: 50px auto
 }
 footer {
+    background: black;
+    color: white;
     padding: 25px 0;
     text-align: center
 }
@@ -380,3 +439,32 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #fed136
 }
+#progress {
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+    width: 0px;
+    background: rgba(255, 255, 255, 0.59);
+    z-index: 500;
+}
+/* pager */
+.cycle-pager { 
+    text-align: right; width: 100%;
+    position: absolute;
+    bottom: 10px;
+    overflow: hidden;
+    padding-right: 20px;
+    z-index: 500;
+}
+.cycle-pager span { 
+    font-family: arial;
+    font-size: 50px;
+    width: 16px;
+    height: 16px; 
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.2);
+    cursor: pointer; 
+}
+.cycle-pager span.cycle-pager-active { color: rgb(255, 197, 0);}
+.cycle-pager > * { cursor: pointer;}
+
