@@ -519,16 +519,16 @@ body {
     position: relative;
 }
 
-.timeline:before {
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    content: "";
-    width: 2px;
-    background-color: #f1f1f1;
-    left: 40px;
-    margin-left: -1.5px;
-}
+    .timeline:before {
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        content: "";
+        width: 2px;
+        background-color: #8e8e8e;
+        left: 40px;
+        margin-left: -1.5px;
+    }
 
 .timeline>li {
     margin-bottom: 50px;
