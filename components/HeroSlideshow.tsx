@@ -5,16 +5,28 @@ import Image from 'next/image';
 
 const slides = [
   {
-    src: '/img/header-bg-1@0,5x.jpg',
+    src: '/img/gallery/pc-building-workshop/12.jpg',
     overlay: 'bg-black/50',
   },
   {
-    src: '/img/header-bg-2@1x.jpg',
-    overlay: 'bg-gradient-to-b from-black/80 via-black/30 to-black/0',
+    src: '/img/gallery/megalan/1.jpg',
+    overlay: 'bg-black/50',
   },
   {
-    src: '/img/header-bg-3.jpg',
-    overlay: 'bg-gradient-to-b from-black/30 via-black/50 to-black/0',
+    src: '/img/gallery/pc-building-workshop/11.jpg',
+    overlay: 'bg-black/50',
+  },
+  {
+    src: '/img/gallery/megalan/20.jpg',
+    overlay: 'bg-black/50',
+  },
+  {
+    src: '/img/gallery/pc-building-workshop/35.jpg',
+    overlay: 'bg-black/50',
+  },
+  {
+    src: '/img/gallery/oceanic-prodigies/28.jpg',
+    overlay: 'bg-black/50',
   },
 ];
 

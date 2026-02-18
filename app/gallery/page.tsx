@@ -6,23 +6,23 @@ export default function Gallery() {
     {
       title: "Oceanic Prodigies",
       description: "Australia's only LAN intervarsity esports tournament",
-      imageCount: 4,
-      thumbnail: "/img/events/oceanic-prodigies-1.jpg",
+      imageCount: 29,
+      thumbnail: "/img/gallery/oceanic-prodigies/1.jpg",
       slug: "oceanic-prodigies"
     },
     {
       title: "MegaLan",
       description: "Highlights from our biggest LAN party",
-      imageCount: "Coming Soon",
-      thumbnail: null,
+      imageCount: 49,
+      thumbnail: "/img/gallery/megalan/1.jpg",
       slug: "megalan"
     },
     {
       title: "PC Building Workshop",
       description: "Teaching members how to build their first PC",
-      imageCount: "Coming Soon",
-      thumbnail: null,
-      slug: null
+      imageCount: 64,
+      thumbnail: "/img/gallery/pc-building-workshop/1.jpg",
+      slug: "pc-building-workshop"
     },
     {
       title: "Social Meetups",
@@ -99,7 +99,7 @@ export default function Gallery() {
               <div className="mt-12 bg-gray-900 rounded-xl p-8 text-white text-center">
                 <h2 className="text-3xl font-bold mb-4">More Photos Coming Soon!</h2>
                 <p className="text-lg text-gray-300 mb-6">
-                  We're building our photo gallery. Check back soon for more event photos and memories!
+                  We&apos;re building our photo gallery. Check back soon for more event photos and memories!
                 </p>
                 <p className="text-gray-300">
                   Have photos to share? Send them to <a href="mailto:unswpcsoc@gmail.com" className="underline font-semibold hover:text-white">unswpcsoc@gmail.com</a>

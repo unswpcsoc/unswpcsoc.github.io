@@ -12,7 +12,7 @@ export default function Team() {
     {
       name: "Maahir Ahmed",
       title: "Treasurer",
-      photo: null
+      photo: "/img/team/maahir-ahmed.jpg"
     },
     {
       name: "Jorge Underhill",
@@ -28,37 +28,38 @@ export default function Team() {
 
   const portfolios = [
     {
-      director: "Events Director Name",
-      title: "Director of Events",
+      director: "Harman Singh, Ryan Le & Patrick Kyaw",
+      title: "Directors of Events",
       subcommittee: [
-        "Events Subcommittee Member 1",
-        "Events Subcommittee Member 2",
-        "Events Subcommittee Member 3"
+        "Li Wanze (Grace)",
+        "Zachary Liam Lam",
+        "Will Tran",
+        "Veli",
+        "Gavriana Lianti",
+        "Haley Dixon"
       ]
     },
     {
-      director: "Marketing Director Name",
-      title: "Director of Marketing",
+      director: "Aurelia Maxima & Jasmine Heit",
+      title: "Directors of Marketing",
       subcommittee: [
-        "Marketing Subcommittee Member 1",
-        "Marketing Subcommittee Member 2"
+        "Leslie Siu",
+        "Vanya Gupta"
       ]
     },
     {
       director: "Jorge Underhill",
       title: "Director of Hardware",
       subcommittee: [
-        "Sponsorships Subcommittee Member 1",
-        "Sponsorships Subcommittee Member 2"
+        "Chan Jyun Jing (JJ)",
+        "Julian Alcord",
+        "Evan Lister"
       ]
     },
     {
-      director: "DevOps Director Name",
+      director: "Alex Gao",
       title: "Director of DevOps",
-      subcommittee: [
-        "IT Subcommittee Member 1",
-        "IT Subcommittee Member 2"
-      ]
+      subcommittee: []
     }
   ];
 
@@ -156,7 +157,7 @@ export default function Team() {
               <div className="mt-16 bg-gray-900 rounded-xl p-8 text-white text-center">
                 <h2 className="text-3xl font-bold mb-4">Want to Join the Committee?</h2>
                 <p className="text-lg text-gray-300 mb-6">
-                  We're always looking for passionate members to join our team! Keep your eyes open for subcommitte recruitment.
+                  We&apos;re always looking for passionate members to join our team! Keep your eyes open for subcommittee recruitment in our Discord.
                 </p>
               </div>
             </div>

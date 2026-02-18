@@ -1,20 +1,27 @@
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import GalleryViewer from '@/components/GalleryViewer';
+import Link from 'next/link';
 
 // Gallery configuration - just add the folder name and photo count here!
 const galleryConfig: Record<string, { title: string; description: string; photoCount: number; folder: string }> = {
   'oceanic-prodigies': {
     title: 'Oceanic Prodigies',
     description: "Australia's only LAN intervarsity esports tournament",
-    photoCount: 4,
+    photoCount: 29,
     folder: 'oceanic-prodigies'
   },
   'megalan': {
     title: 'MegaLan',
     description: 'Highlights from our biggest LAN party',
-    photoCount: 0,
+    photoCount: 49,
     folder: 'megalan'
+  },
+  'pc-building-workshop': {
+    title: 'PC Building Workshop',
+    description: 'Teaching members how to build their first PC',
+    photoCount: 64,
+    folder: 'pc-building-workshop'
   }
 };
 
@@ -29,7 +36,7 @@ export default async function GalleryDetail({ params }: { params: Promise<{ slug
         <main className="pt-20 min-h-screen bg-gray-50 flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-3xl font-bold text-gray-800 mb-4">Gallery Not Found</h1>
-            <a href="/gallery" className="text-blue-600 hover:underline">← Back to Gallery</a>
+            <Link href="/gallery" className="text-blue-600 hover:underline">← Back to Gallery</Link>
           </div>
         </main>
         <Footer />
@@ -45,7 +52,7 @@ export default async function GalleryDetail({ params }: { params: Promise<{ slug
           <div className="text-center">
             <h1 className="text-3xl font-bold text-gray-800 mb-4">{config.title}</h1>
             <p className="text-gray-600 mb-6">Photos coming soon!</p>
-            <a href="/gallery" className="text-blue-600 hover:underline">← Back to Gallery</a>
+            <Link href="/gallery" className="text-blue-600 hover:underline">← Back to Gallery</Link>
           </div>
         </main>
         <Footer />
@@ -67,9 +74,9 @@ export default async function GalleryDetail({ params }: { params: Promise<{ slug
         <section className="bg-gray-900 text-white py-20">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto">
-              <a href="/gallery" className="text-gray-400 hover:text-white mb-4 inline-block">
+              <Link href="/gallery" className="text-gray-400 hover:text-white mb-4 inline-block">
                 ← Back to Gallery
-              </a>
+              </Link>
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
                 {config.title}
               </h1>

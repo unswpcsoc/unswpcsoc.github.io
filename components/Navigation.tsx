@@ -12,11 +12,13 @@ export default function Navigation() {
         <div className="flex justify-between items-center py-3">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <img
-              src="/img/pcsoc_web.svg"
-              alt="UNSW PCSoc"
-              className="h-12 w-auto"
-            />
+            <div className="bg-gray-500 rounded-lg p-2">
+              <img
+                src="/img/pcsoc_web.svg"
+                alt="UNSW PCSoc"
+                className="h-12 w-auto"
+              />
+            </div>
           </Link>
 
           {/* Mobile menu button */}

@@ -41,7 +41,7 @@ export default function Events() {
                       <h2 className="text-4xl font-bold drop-shadow-lg">Oceanic Prodigies</h2>
                     </div>
                     <p className="text-xl drop-shadow-md">
-                      Australia's Only LAN Intervarsity Esports Tournament
+                      Australia&apos;s Only LAN Intervarsity Esports Tournament
                     </p>
                   </div>
                 </div>
@@ -49,10 +49,10 @@ export default function Events() {
                   <div className="prose max-w-none mb-8">
                     <h3 className="text-2xl font-bold text-gray-800 mb-4">About the Tournament</h3>
                     <p className="text-gray-600 text-lg leading-relaxed mb-4">
-                      Oceanic Prodigies is Australia's only LAN intervarsity esports tournament, presented by UNSW PCSoc and Arc@UNSW. Experience live competition with a physical audience as Australia's best university teams battle it out at The Roundhouse, UNSW Kensington Campus.
+                      Oceanic Prodigies is Australia&apos;s only LAN intervarsity esports tournament, presented by UNSW PCSoc and Arc@UNSW. Experience live competition with a physical audience as Australia&apos;s best university teams battle it out at The Roundhouse, UNSW Kensington Campus.
                     </p>
                     <p className="text-gray-600 text-lg leading-relaxed mb-4">
-                      Featuring teams from ANU, Macquarie, UNSW, University of Sydney, Western Sydney University, and University of Wollongong competing for over $5,000 in prizes plus hardware from sponsors like Gigabyte AORUS.
+                      Featuring teams from ANU, UTS, Macquarie, UNSW, University of Sydney, Western Sydney University, and University of Wollongong competing for over $5,000 in prizes plus hardware from sponsors like Gigabyte AORUS.
                     </p>
                   </div>
 
@@ -81,8 +81,8 @@ export default function Events() {
                       <ul className="space-y-2 text-gray-700">
                         <li>• FREE entry to watch live</li>
                         <li>• Free fairy floss & popcorn</li>
-                        <li>• Pick'ems prediction game</li>
-                        <li>• Gaming monitor raffles (up to $1,300 value!)</li>
+                        <li>• Pick&apos;ems prediction game</li>
+                        <li>• Free Raffles! (up to $1,300 value!)</li>
                       </ul>
                     </div>
                   </div>
@@ -92,7 +92,7 @@ export default function Events() {
                     <div className="grid md:grid-cols-2 gap-4 text-gray-200">
                       <div>
                         <div className="font-semibold text-blue-300">Location</div>
-                        <div>The Roundhouse, UNSW Kensington Campus</div>
+                        <div>UNSW Kensington Campus</div>
                       </div>
                       <div>
                         <div className="font-semibold text-blue-300">Entry</div>
@@ -103,7 +103,7 @@ export default function Events() {
                         <div>hello@megalan.com.au</div>
                       </div>
                       <div>
-                        <div className="font-semibold text-blue-300">Sponsor</div>
+                        <div className="font-semibold text-blue-300">Main Sponsor</div>
                         <div>Gigabyte AORUS</div>
                       </div>
                     </div>
@@ -135,22 +135,25 @@ export default function Events() {
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
               <div className="bg-white rounded-xl shadow-xl overflow-hidden">
-                <div className="bg-gradient-to-r from-red-600 to-orange-600 px-8 py-12 text-white">
-                  <div className="flex items-center gap-4 mb-4">
-                    <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/>
-                    </svg>
-                    <h2 className="text-4xl font-bold">MegaLan</h2>
+                <div className="relative px-8 py-12 text-white bg-black overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <img src="/img/megalan-logo.png" alt="" className="w-full h-full object-contain opacity-10" />
                   </div>
-                  <p className="text-xl text-red-100">
-                    Australia's Biggest LAN Party
-                  </p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+                  <div className="relative">
+                    <div className="flex items-center gap-4 mb-4">
+                      <img src="/img/megalan-logo.png" alt="MegaLan" className="h-16 w-auto" />
+                    </div>
+                    <p className="text-xl text-gray-200">
+                      LAN Party
+                    </p>
+                  </div>
                 </div>
                 <div className="p-8">
                   <div className="prose max-w-none mb-8">
                     <h3 className="text-2xl font-bold text-gray-800 mb-4">About MegaLan</h3>
                     <p className="text-gray-600 text-lg leading-relaxed mb-4">
-                      MegaLan is Australia's premier LAN party event, bringing hundreds of gamers together for an unforgettable weekend of gaming, competitions, and community. Bring your PC, meet fellow gamers, and experience gaming the way it was meant to be played - together!
+                      MegaLan is Australia&apos;s premier LAN party event presented by UNSW PCSoc, bringing hundreds of gamers together for an unforgettable weekend of gaming, competitions, and community. Bring your PC, meet fellow gamers, and experience gaming the way it was meant to be played - together!
                     </p>
                   </div>
 
@@ -160,7 +163,7 @@ export default function Events() {
                       <div className="text-gray-700 font-medium">Hours of Gaming</div>
                     </div>
                     <div className="bg-orange-50 p-6 rounded-lg text-center">
-                      <div className="text-4xl font-bold text-orange-600 mb-2">100+</div>
+                      <div className="text-4xl font-bold text-orange-600 mb-2">700+</div>
                       <div className="text-gray-700 font-medium">Attendees</div>
                     </div>
                     <div className="bg-red-50 p-6 rounded-lg text-center">
@@ -195,8 +198,8 @@ export default function Events() {
                           <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
                         </svg>
                         <div>
-                          <div className="font-semibold">Drinks</div>
-                          <div className="text-gray-300 text-sm">Drinks</div>
+                          <div className="font-semibold">Artist Alley</div>
+                          <div className="text-gray-300 text-sm">Meet local artists and get exclusive merchandise</div>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
@@ -231,7 +234,7 @@ export default function Events() {
 
                   <div className="flex gap-4 justify-center">
                     <a href="https://megalan.com.au" target="_blank" rel="noopener noreferrer" className="inline-block bg-gradient-to-r from-red-600 to-orange-600 text-white font-bold py-4 px-8 rounded-lg hover:from-red-700 hover:to-orange-700 transition-all shadow-lg hover:shadow-xl">
-                      Visit MegaLan.com.au
+                      MegaLAN Website
                     </a>
                   </div>
                 </div>
@@ -295,7 +298,7 @@ export default function Events() {
                   Events Coming Soon
                 </h3>
                 <p className="text-gray-600">
-                  We're planning exciting events for our members. Stay tuned by joining our community channels above!
+                  We&apos;re planning exciting events for our members. Stay tuned by joining our community channels above!
                 </p>
               </div>
             </div>
