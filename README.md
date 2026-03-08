@@ -1,12 +1,11 @@
 # UNSW PCSoc Website
 
-Modern Next.js website for the UNSW Computer Enthusiasts Society.
+UNSW Computer Enthusiasts Society website built on Next.js 
 
 ## Features
 
 - Built with Next.js 16 and React
 - Styled with Tailwind CSS
-- Fully responsive design
 - Static site generation for GitHub Pages
 - Automatic deployment via GitHub Actions
 
@@ -55,7 +54,7 @@ If you need to deploy manually:
 ## Project Structure
 
 ```
-├── app/                # Next.js App Router pages
+├── app/               # Next.js App Router pages
 │   ├── page.tsx       # Home page
 │   ├── events/        # Events page
 │   ├── layout.tsx     # Root layout
@@ -64,7 +63,7 @@ If you need to deploy manually:
 │   ├── Navigation.tsx # Navigation bar
 │   └── Footer.tsx     # Footer
 ├── public/            # Static assets
-│   └── img/          # Images
+│   └── img/           # Images
 └── next.config.ts     # Next.js configuration
 ```
 
@@ -76,7 +75,7 @@ Edit `app/events/page.tsx` to add event information.
 
 ### Managing Photo Galleries
 
-The website features an easy-to-use gallery system. Just drop photos in a folder, rename them sequentially, and update a config file!
+The website features an easy-to-use gallery system. Just drop photos in a folder, rename them sequentially, and update the config file.
 
 #### Quick Start: Adding a New Gallery
 
@@ -88,18 +87,26 @@ mkdir -p public/img/gallery/your-event-name
 # Copy your photos here (they can have any names)
 ```
 
-**2. Rename Photos Automatically**
+**2. Rename and Compress Photos Automatically**
 
-Use the included script to rename all photos to 1.jpg, 2.jpg, 3.jpg, etc.:
+Use the included script to rename all photos to 1.jpg, 2.jpg, 3.jpg, etc. and compress them for faster loading:
 ```bash
 ./rename-gallery-photos.sh public/img/gallery/your-event-name
 ```
 
+Requires [ImageMagick](https://imagemagick.org/):
+```bash
+sudo apt install imagemagick   # Ubuntu/Debian
+brew install imagemagick       # macOS
+```
+
 The script will:
 - Find all image files (JPG, JPEG, PNG)
-- Ask for confirmation before renaming
+- Ask for confirmation before processing
 - Safely rename them in alphabetical order
 - Convert all to .jpg extension
+- Resize to max 1920px (without upscaling)
+- Compress at quality 85 and strip EXIF metadata
 
 **3. Update Gallery Configuration**
 
@@ -145,7 +152,6 @@ git push
 - **Automatic Photo Loading**: Photos are loaded as 1.jpg, 2.jpg, 3.jpg automatically
 - **Lightbox Viewer**: Click any photo for full-screen view with arrow navigation
 - **Responsive Grid**: Mobile-friendly layout
-- **No Manual References**: Just drop files and update the count!
 
 #### Example Workflow
 
@@ -154,12 +160,12 @@ git push
 mkdir -p public/img/gallery/megalan-2025
 cp ~/Downloads/*.{jpg,png} public/img/gallery/megalan-2025/
 
-# 2. Rename them sequentially
+# 2. Rename and compress them sequentially
 ./rename-gallery-photos.sh public/img/gallery/megalan-2025
 # Output: Found 3 image files
-# Renamed: DSC_9876.png -> 1.jpg
-# Renamed: IMG_1234.JPG -> 2.jpg
-# Renamed: IMG_1235.JPG -> 3.jpg
+# Processed: DSC_9876.png -> 1.jpg
+# Processed: IMG_1234.JPG -> 2.jpg
+# Processed: IMG_1235.JPG -> 3.jpg
 
 # 3. Update configs (see above)
 
